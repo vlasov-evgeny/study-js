@@ -39,7 +39,7 @@
     color: white;
     margin-top: 12px;
     margin-bottom: 12px;
-    transition: transform 1s ease;
+    transition: all .3s ease;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 12px;
@@ -50,5 +50,54 @@
 
 .aside-menu-item:hover {
     transform: scale(1.1);
-    color: red;
+}
+
+.calculator {
+    width: min-content;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.calculator-buttons-row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.calculator-buttons-row .btn {
+    width: 50px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.calculator-size-anchor {
+    background: black;
+    min-width: 25px;
+    min-height: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+}
+
+.calculator-drag-area {
+    background: black;
+    min-height: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    cursor: grab;
 }
